@@ -1,4 +1,4 @@
-package Services; // O com.gestor.gestor.services si lo estandarizaste
+package com.gestor.gestor.services;
 
 import com.gestor.gestor.entitys.Ingreso;
 import com.gestor.gestor.repositorys.IngresoRepository;
@@ -28,7 +28,7 @@ public class IngresoService {
     }
 
     public Ingreso updateIngreso(Long id, Ingreso ingresoDetails) {
-        // Busca el ingreso y lanza excepción si no existe
+
         Ingreso ingreso = ingresoRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Ingreso no encontrado con ID: " + id));
 

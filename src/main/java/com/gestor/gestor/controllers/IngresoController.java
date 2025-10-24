@@ -1,7 +1,8 @@
-package Controllers; // O com.gestor.gestor.controllers si lo estandarizaste
+package com.gestor.gestor.controllers; // O com.gestor.gestor.controllers si lo estandarizaste
 
-import Services.IngresoService; // O el paquete correcto
+
 import com.gestor.gestor.entitys.Ingreso;
+import com.gestor.gestor.services.IngresoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/gestor/ingreso")
 public class IngresoController {
